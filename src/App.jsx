@@ -8,8 +8,7 @@ import {
   Products, 
   ProductDetail, 
   Checkout, 
-  Home, 
-  NotFound 
+  Home 
 } from "./pages"
 
 const App = () => {
@@ -30,7 +29,6 @@ const App = () => {
           {products.map((product) => (
             <Route key={product.slug} path={`/${product.category}/${product.slug}`} element={<ProductDetail />} />
           ))}
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </AlertProvider>
     </ToggleProvider>
