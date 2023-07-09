@@ -25,7 +25,7 @@ const Checkout = () => {
         <header className="bg-cDark">
           <Header />
         </header>
-        <main className='ctr flex flex-col my-20 max-w-[35rem] md:max-w-[39.6rem] lg:max-w-[69.625rem] w-full'>
+        <main className='ctr flex flex-col my-20 max-w-[35rem] lg:max-w-[45.6rem] xl:max-w-[69.625rem] w-full'>
           <button onClick={() => navigate(-1)} className="text-[15px] text-cDarkGray font-medium hover:text-cBrown lg:mb-14 mb-6 text-left">Go Back</button>
           <form onSubmit={methods.handleSubmit(onSubmit)} className='flex flex-col justify-center items-center gap-8 xl:flex-row xl:items-start w-full'>
             <Form />

@@ -1,4 +1,5 @@
 import { useFormContext } from "react-hook-form";
+import './Input.css'
 
 const Input = ({ id, label, type, placeholder, className="" }) => {
   const { register, formState: { errors } } = useFormContext();
@@ -20,14 +21,14 @@ const Input = ({ id, label, type, placeholder, className="" }) => {
   };
 
   return (
-    <div className={`flex flex-col gap-2 relative ${className}`}>
-      {errors[id] && (<p className="text-[13px] text-red-500 font-bold absolute top-0 right-0">{errors[id].message}</p>) }
-      <label className="text-xs font-bold" htmlFor={id}>{label}</label>
+    <div className={`${errors[id] ? 'sm-Input__grid__error xl-Input__grid__error' : 'sm-Input__grid xl-Input__grid'} ${className} xl:gap-2`}>
+      {errors[id] && (<p className="text-[13px] text-red-500 font-bold xl:col-start-2 xl:text-right mb-1 xl:mb-0">{errors[id].message}</p>) }
+      <label className={`text-xs font-bold row-start-1 ${errors[id] ? 'mb-[6px]' : 'mb-2'} xl:mb-0`} htmlFor={id}>{label}</label>
       <input
         {...register(id, {
           ...(id === 'email' ? emailValidation : id === 'phone' ? phoneValidation : { required: `${label} is required` }),
         })}
-        className={`p-4 placeholder:text-sm placeholder:text-cDarkGray placeholder:font-bold border border-[#CFCFCF] rounded-lg ${errors[id] ?'border-red-500 focus:outline-none' : 'focus:border-cBrown focus:outline-none'}`}
+        className={`${errors[id] && 'col-span-full'} p-4 placeholder:text-sm placeholder:text-cDarkGray placeholder:font-bold border border-[#CFCFCF] rounded-lg ${errors[id] ?'border-red-500 focus:outline-none' : 'focus:border-cBrown focus:outline-none'}`}
         id={id}
         name={id}
         type={type}

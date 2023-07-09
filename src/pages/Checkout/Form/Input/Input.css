@@ -1,0 +1,21 @@
+.sm-Input__grid {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+.sm-Input__grid__error {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+}
+
+@media (min-width: 1280px) {
+    .xl-Input__grid {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+    }
+    .xl-Input__grid__error {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+    }
+}
