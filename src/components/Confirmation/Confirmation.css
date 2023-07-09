@@ -1,0 +1,17 @@
+.Confirmation__left {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.Confirmation__right {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+@media  (min-width: 768px) {
+    .Confirmation__left {
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .Confirmation__right {
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+}

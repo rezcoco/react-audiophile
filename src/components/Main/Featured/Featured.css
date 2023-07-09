@@ -1,0 +1,83 @@
+.Featured__zx9-speaker {
+    background: url("/assets/home/desktop/pattern-circles.svg") no-repeat;
+    color: white;
+    @apply flex flex-col lg:flex-row items-center gap-8 bg-cBrown relative lg:h-[35rem] overflow-hidden p-16 rounded-lg
+}
+
+.Featured__zx9-speaker-content {
+    @apply flex flex-col gap-6 justify-center items-center text-center lg:items-start lg:text-left mx-auto lg:mr-16 max-w-[20rem]
+}
+
+.Featured__zx9-speaker-image {
+    @apply lg:absolute lg:bottom-[-10px] lg:ml-16 lg:max-w-[22.625rem] md:max-w-[12rem] max-w-[10rem]
+}
+
+.Featured__zx9-speaker-heading {
+    @apply text-4xl md:text-[56px] leading-[40px] md:leading-[58px]
+}
+
+/* ZX7 */
+
+.Featured__zx7-speaker {
+    @apply relative
+}
+
+.Featured__zx7-speaker-content {
+    @apply flex flex-col text-cDark absolute top-1/2 -translate-y-1/2 p-6 md:p-16 lg:p-24 gap-8
+}
+
+.Featured__zx7-speaker-image {
+    @apply rounded-lg w-full
+}
+
+.Featured__zx7-speaker-heading {
+    @apply text-[28px] tracking-[2px]
+}
+
+
+/* YX1 */
+
+.Featured__yx1-earphones {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-3 lg:gap-8
+}
+.Featured__yx1-earphones-content {
+    @apply flex flex-col bg-cGray rounded-lg p-6 md:p-16 lg:p-24 justify-center md:gap-x-[11px] gap-8 max-h-80 min-h-[12.5rem]
+}
+
+.Featured__yx1-earphones-image {
+    @apply rounded-lg max-h-80 w-full
+}
+
+.Featured__yx1-earphones-heading {
+    @apply text-[28px] tracking-[2px]
+}
+
+/* BUTTON */
+
+.Featured__zx9-speaker-btn {
+    color: white;
+    @apply bg-cDark hover:bg-[#3d3c3a]
+}
+.Featured__zx7-speaker-btn, .Featured__yx1-earphones-btn {
+    @apply text-cDark border border-cDark bg-transparent hover:bg-cDark hover:text-white
+}
+
+@media (max-width: 640px) {
+    .Featured__zx9-speaker {
+        background-size: 38rem;
+        background-position: center -9rem;
+    }
+}
+@media (min-width: 640px) {
+    .Featured__zx9-speaker {
+        background-size: 55rem;
+        background-position: center -18rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .Featured__zx9-speaker {
+        background-size: auto;
+        background-position: -10rem -2rem;
+    }
+}
