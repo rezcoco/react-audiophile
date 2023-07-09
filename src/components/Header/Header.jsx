@@ -22,7 +22,7 @@ const Header = () => {
         <Link to="/" className='mr-auto'>
                 <img src="/assets/shared/desktop/logo.svg" alt="Logo" />
         </Link>
-        <nav className="lg:flex hidden justify-center items-center md:gap-x-[34px] mr-auto">
+        <nav id="xl-nav" className="lg:flex hidden justify-center items-center md:gap-x-[34px] mr-auto">
             <NavLink to="/" className="text-white text-[13px] font-bold hover:text-cBrown">HOME</NavLink>   
             <NavLink to="/headphones" className="text-white text-[13px] font-bold hover:text-cBrown">HEADPHONES</NavLink>   
             <NavLink to="/speakers" className="text-white text-[13px] font-bold hover:text-cBrown">SPEAKERS</NavLink>   
@@ -38,7 +38,7 @@ const Header = () => {
         </div>
       </div>
       { toggle && (
-        <nav className="absolute inset-0 h-full z-50">
+        <nav id="sm-nav" className="absolute inset-0 h-full z-50">
           <div onClick={() => setToggle(!toggle)} className="bg-white pt-24 pb-16 mt-[5.70rem] rounded-b-lg">
             <Categories />
           </div>
